@@ -1,0 +1,14 @@
+.todo-container {
+  width: 60%;
+  margin: 25px auto;
+  text-align: left;
+  line-height: 5px;
+}
+
+div h2 {
+  font-size: 1.5rem;
+}
+
+div p {
+  color: #c8c8c8;
+}

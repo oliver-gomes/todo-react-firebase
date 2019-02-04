@@ -1,0 +1,23 @@
+.input {
+  border-bottom: #6442f0;
+  border: none;
+  /* background-color: red; */
+  font-size: 1.8rem;
+  padding: 5px 18px;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 380px;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+*:focus {
+  outline: none;
+}
+/* ::placeholder {
+  
+  color: #fff;
+  opacity: 1; 
+} */

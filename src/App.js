@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Todo from "./components/Todo";
-
+import Input from "./components/Input";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import "./App.css";
 
 class App extends Component {
@@ -13,12 +15,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>React-Firebase Todo</h1>
-        {this.state.todos.map(todo => (
-          <Todo key={todo.id} todoContent={todo.todoContent} />
-        ))}
-      </div>
+      <Container className="App">
+        <Row>
+          <h1>React-Firebase Todo</h1>
+        </Row>
+        <Row>
+          <Input />
+        </Row>
+
+        <Row>
+          {this.state.todos.map(todo => (
+            <Todo key={todo.id} todoContent={todo.todoContent} />
+          ))}
+        </Row>
+      </Container>
     );
   }
 }

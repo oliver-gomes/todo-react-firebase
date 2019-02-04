@@ -1,2 +1,12 @@
 import React, { Component } from "react";
-import
+import "./Input.css";
+
+export default function Input() {
+  return (
+    <input
+      type="text"
+      className="input"
+      placeholder="What needs to be done? "
+    />
+  );
+}
