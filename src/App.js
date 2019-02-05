@@ -13,14 +13,23 @@ class App extends Component {
     ]
   };
 
+  addTodo = todo => {
+    const previousTodo = this.state.todos;
+    previousTodo = push({ id: previousTodo.length + 1, todoContent: todo });
+    this.setState({
+      todos: previousTodo
+    });
+  };
+
   render() {
     return (
       <Container className="App">
         <Row>
           <h1>React-Firebase Todo</h1>
         </Row>
+
         <Row>
-          <Input />
+          <Input addTodo={this.addTodo} />
         </Row>
 
         <Row>
