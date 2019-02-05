@@ -7,25 +7,33 @@ class Input extends Component {
   };
 
   handleUserInput = e => {
+    console.log(e.target.value);
     this.setState({
       newtodoContent: e.target.value
     });
   };
 
-  writeTodo = () => {
+  writeTodo = e => {
+    e.preventDefault();
+    this.props.addtodo(this.state.newtodoContent);
     this.setState({ newtodoContent: "" });
   };
+
   render() {
     return (
-      <input
-        type="text"
-        className="input"
-        placeholder="What needs to be done? "
-        value={this.state.newtodoContent}
-        onChange={this.handleUserInput}
-        onClick={this.writeTodo}
-        addTodo={this.state.newtodoContent}
-      />
+      <React.Fragment>
+        <form action="" onSubmit={this.writeTodo}>
+          <input
+            type="text"
+            className="input"
+            placeholder="What needs to be done? "
+            value={this.state.newtodoContent}
+            onChange={this.handleUserInput}
+            // o={this.writeTodo}
+            addtodo={this.state.newtodoContent}
+          />
+        </form>
+      </React.Fragment>
     );
   }
 }
