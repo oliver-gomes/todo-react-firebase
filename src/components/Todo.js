@@ -6,7 +6,6 @@ export default class Todo extends Component {
     return (
       <div className="todo-container">
         <h2>{this.props.todoContent}</h2>
-        <p>something</p>
       </div>
     );
   }
